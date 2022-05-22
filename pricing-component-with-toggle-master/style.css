@@ -1,0 +1,277 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+
+:root{
+    --gradient: hsl(236, 72%, 79%), hsl(237, 63%, 64%);
+
+    --very-light-gray-blue:hsl(240, 78%, 98%);
+    --light-gray-blue:hsl(234, 14%, 74%);
+    --gray-blue:hsl(233, 13%, 49%);
+    --dark-gray-blue:hsl(232, 13%, 33%);
+    --purple: hsl(237, 63%, 64%);
+
+    --body-font: 'Montserrat', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 15px;
+}
+
+body{
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    overflow-y: scroll;
+    box-sizing: border-box;
+    font-family: var(--body-font);
+    background-color: var(--very-light-gray-blue);
+    background-image: url(images/bg-top.svg), url(images/bg-bottom.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-size: 26.5%, 26.5%;
+    background-position: top 0 right -1rem, bottom -4.7rem left -1.9rem;
+}
+
+body::-webkit-scrollbar{
+    display: none;
+}
+
+main{
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+
+h1{
+    color: var(--gray-blue);
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* Toggle section */
+.toggle-section{
+    display: inline-flex;
+    flex-direction: row;
+    gap: 1.9rem;
+    margin: 0 auto;
+    margin-top: 2.6rem;
+    align-items: center;
+}
+
+.toggle-area{
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    width: 3.8rem;
+    height: 2.3rem;
+    border-radius: 25px;
+    background: linear-gradient(var(--gradient));
+}
+
+.toggle-btn{
+    cursor: pointer;
+    position: relative;
+    width: 1.7rem;
+    height: 1.7rem;
+    margin: 5%;
+    border-radius: 50%;
+    background-color: var(--very-light-gray-blue);
+}
+
+.toggle-area.monthly{
+    justify-content: flex-end;
+    align-content: flex-end;
+}
+
+.toggle-area.anually{
+    justify-content: flex-start;
+    align-content: flex-start;
+}
+
+.toggle-section p{
+    color: var(--light-gray-blue);
+}
+
+/* Pricing section */
+
+.pricing-container{
+    display: grid;
+    width: 72%;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0 auto;
+    margin-top: 5.8rem;
+}
+
+.pricing{
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    border-radius: 10px;
+    padding: 2.1rem 0.8rem;
+}
+
+.container2{
+    background: linear-gradient(var(--gradient));
+    color: white;
+    margin-top: -1.6rem;
+    margin-bottom: -1.6rem;
+}
+
+.container1,
+.container3{
+    background-color: white;
+    gap: 1.3rem;
+}
+
+.pricing h2{
+    font-size: 1.23rem;
+    font-weight: 700;
+}
+
+.container2 h2{
+    padding-top: 12px;
+}
+
+.container1 h2,
+.container1 li,
+.container3 h2,
+.container3 li{
+    color: var(--light-gray-blue);
+}
+
+.pricing p{
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    margin: 0 auto;
+    font-size: 4.6rem;
+}
+
+.dollar-sign{
+    font-size: 2.6rem;
+}
+
+.container1 p,
+.container3 p{
+    color: var(--dark-gray-blue);
+}
+
+.container2 p{
+    margin-top: -11px;
+}
+
+hr {
+    width: 80%;
+    border-width: 0.5px;
+    margin: 0 auto;
+    border-color: transparent;
+    border-color: var(--light-gray-blue);
+    border-style: solid;
+    opacity: 0.5;
+}
+
+.pricing ul{
+    list-style: none;
+    margin-top: 10px;
+}
+
+.pricing ul li{
+    padding: 1.06rem;
+}
+
+.container2 ul li{
+    padding: 1.1rem;
+}
+
+.pricing button{
+    cursor: pointer;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 1rem;
+    border-radius: 10px;
+    border-color: transparent;
+    border-style: solid;
+    border-width: 1px;
+    padding: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    word-spacing: 3px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.container2 button{
+    color: var(--purple);
+    background-color: white;
+}
+
+.container1 button,
+.container3 button{
+    color: white;
+    background: linear-gradient(var(--gradient));
+    background-repeat: no-repeat;
+}
+
+@media (hover: hover){
+    .container1 button:hover,
+    .container3 button:hover{
+        background: transparent;
+        border-color: var(--light-gray-blue);
+        color: var(--purple);
+        border-width: 1px;
+    }
+    .container2 button:hover{
+        background-color: transparent;
+        border-color: white;
+        color: white;
+        border-width: 1px;
+    }
+}
+
+@media screen and (max-width: 1025px) {
+    .pricing-container{
+        max-width: 50%;
+        grid-template-columns: 1fr;
+        margin-top: 5.8rem;
+        gap: 5rem;
+    }
+
+    .container2{
+        margin-top: initial;
+        margin-bottom: initial;
+    }
+
+    .container2 ul li{
+        padding: 1.06rem;
+    }
+
+    .container2 h2{
+        padding-top: initial;
+    }
+
+    .container2 p{
+        margin-top: initial;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    body{
+        background-size: 80%, 26.5%;
+        background-position: top 0 right -10rem, bottom -4.7rem left -1.9rem;
+    }
+    .pricing-container{
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .pricing-container{
+        width: 90%;
+    }
+}
